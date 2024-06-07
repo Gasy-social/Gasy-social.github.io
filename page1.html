@@ -1,0 +1,455 @@
+<html>
+<!DOCTYPE html>
+<html lang="fr"></html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name -"description" content -"Gasy manan-talenta">
+		<meta name -"keywords" content -"HTML,CSS,XML,JavaScript">
+		<meta http-equiv -"refresh" content -"3s"> 
+		<link rel="stylesheet" href="test.css" />
+		<link rel="stylesheet" media="screen and [max-width:1200}" href="petit_resolution.css" />
+		<title>Gasy manan-talenta sy mpandraraha</title>
+		<style>
+			
+			 .slideshow{
+    margin:0  auto;
+	padding-top: 0px;
+	background-color:bleu;
+	}
+	.content{ 
+			margin: auto;
+			width:190px;
+			perspective:1000px;
+			position:right;
+			padding-top:1px;
+	}
+	.content-carrousel{
+			width:100%;
+			position:absolute;
+			float:right;
+			animation: rotar 15s infinite linear;
+			transform-style:preserve-3d;
+	}
+	.content-carrousel:hover{
+			animation-play-state:paused;
+			cursor:pointer;
+	}
+	.content-carrousel figure{
+					width:100%;
+					height:120px;
+					border: 2px solid  #4d444d;
+					overflow:hidden;
+					position:absolute;
+	}
+	.content-carrousel figure:nth-child(1){
+			transform:rotateY(0deg) translateZ(300px);
+	}
+	.content-carrousel figure:nth-child(2){
+			transform:rotateY(60deg) translateZ(300px);
+	}
+	.content-carrousel figure:nth-child(3){
+			transform:rotateY(120deg) translateZ(300px);
+	}
+	.content-carrousel figure:nth-child(4){
+			transform:rotateY(180deg) translateZ(300px);
+	}
+	.content-carrousel figure:nth-child(5){
+			transform:rotateY(240deg) translateZ(300px);
+	}
+	.content-carrousel figure:nth-child(8){
+			transform:rotateY(300deg) translateZ(300px);
+	}
+	.content-carrousel figure:nth-child(9){
+			transform:rotateY(360deg) translateZ(300px);
+	}
+	.shadow{
+			position:absolute;
+			box-shadow:0px 0px 20p  0px #000;
+			border-radius: 2px
+	}
+	.content-carrousel img{
+			image-rendering:auto;
+			transition:all 3s;
+			width:100%; 
+			height:100%;
+	}
+	.content-carrousel:hover{
+			transform:scale(1.2);
+			transition:all 300ms;
+	}
+	@keyframes rotar{
+			from{
+					transform: rotateY(0deg);
+			}to{
+					transform : rotateY( 360deg);
+			}
+	}
+	section {
+/*background-color: lightyellow;*/
+background: url(smiley.png) scroll space;
+}
+			 </style>
+	</head>
+	<body onload="onloadHasFired=true;">
+<script>
+(
+	function(){
+		var m=this,aa=function(a){
+			var b=typeof a;
+			if("object"==b)
+			if(a){
+				if(a instanceof Array)
+				return"array";
+				if(a instanceof Object)
+				return b;
+				var c=Object.prototype.toString.call(a);
+				if("[object Window]"==c)
+				return"object";
+				if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))
+				return"array";
+				if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))
+				return"function"}
+			else return"null";
+			else if("function"==b&&"undefined"==typeof a.call)return"object";
+			return b},ba=function(a,b){
+		var c=Array.prototype.slice.call(arguments,1);
+			return function(){
+				var b=c.slice();b.push.apply(b,arguments);
+				return a.apply(this,b)}},n=Date.now||function(){
+				return+new Date};
+				var ca=String.prototype.trim?function(a){return a.trim()}:function(a){
+					return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,"")},p=function(a,b){return a<b?-1:a>b?1:0};var r;a:{var da=m.navigator;if(da){var ea=da.userAgent;if(ea){r=ea;break a}}r=""};var t=function(a){t[" "](a);return a};t[" "]=function(){};var ga=function(a,b){var c=fa;return Object.prototype.hasOwnProperty.call(c,a)?c[a]:c[a]=b(a)};var u=function(a){try{var b;if(b=!!a&&null!=a.location.href)a:{try{t(a.foo);b=!0;break a}catch(c){}b=!1}return b}catch(c){return!1}},ha=function(a,b){for(var c=[m.top],d=[],e=0,k=b||1024,f;f=c[e++];){a&&!u(f)||d.push(f);try{if(f.frames)for(var h=f.frames.length,g=0;g<h&&c.length<k;++g)c.push(f.frames[g])}catch(l){}}return d},ia=function(a,b){for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(void 0,a[c],c,a)};var ja=function(a,b){this.D=a;this.F=b},ka=function(a,b){this.url=a;this.w=!!b;this.depth=null};var la=function(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)};var w=function(a,b,c,d,e){this.A=c||4E3;this.m=a||"&";this.H=b||",$";this.o=void 0!==d?d:"trn";this.R=e||null;this.v=!1;this.l={};this.M=0;this.j=[]},ma=function(a,b){var c={};c[a]=b;return[c]},x=function(a,b,c,d){a.j.push(b);a.l[b]=ma(c,d)},pa=function(a,b,c,d){b=b+"//"+c+d;var e=na(a)-d.length-0;if(0>e)return"";a.j.sort(function(a,b){return a-b});d=null;c="";for(var k=0;k<a.j.length;k++)for(var f=a.j[k],h=a.l[f],g=0;g<h.length;g++){if(!e){d=null==d?f:d;break}var l=oa(h[g],a.m,a.H);if(l){l=c+l;if(e>=
+l.length){e-=l.length;b+=l;c=a.m;break}else a.v&&(c=e,l[c-1]==a.m&&--c,b+=l.substr(0,c),c=a.m,e=0);d=null==d?f:d}}k="";a.o&&null!=d&&(k=c+a.o+"="+(a.R||d));return b+k+""},na=function(a){if(!a.o)return a.A;var b=1,c;for(c in a.l)b=c.length>b?c.length:b;return a.A-a.o.length-b-a.m.length-1},oa=function(a,b,c,d,e){var k=[];ia(a,function(a,h){var g=qa(a,b,c,d,e);g&&k.push(h+"="+g)});return k.join(b)},qa=function(a,b,c,d,e){if(null==a)return"";b=b||"&";c=c||",$";"string"==typeof c&&(c=c.split(""));if(a instanceof
+Array){if(d=d||0,d<c.length){for(var k=[],f=0;f<a.length;f++)k.push(qa(a[f],b,c,d+1,e));return k.join(c[d])}}else if("object"==typeof a)return e=e||0,2>e?encodeURIComponent(oa(a,b,c,d,e+1)):"...";return encodeURIComponent(String(a))};var y=function(a,b,c,d,e,k){try{var f;c instanceof w?f=c:(f=new w,ia(c,function(a,b){var c=f,d=c.M++,e=ma(b,a);c.j.push(d);c.l[d]=e}));if((d?a.P:Math.random())<(e||a.I)){var h=pa(f,a.O,a.J,a.N+b+"&");"undefined"===typeof k?ra(h):ra(h,k)}}catch(g){}},ra=function(a,b){m.google_image_requests||(m.google_image_requests=[]);var c=m.document.createElement("img");if(b){var d=function(a){b(a);a=d;c.removeEventListener?c.removeEventListener("load",a,!1):c.detachEvent&&c.detachEvent("onload",a);a=d;c.removeEventListener?
+c.removeEventListener("error",a,!1):c.detachEvent&&c.detachEvent("onerror",a)};la(c,"load",d);la(c,"error",d)}c.src=a;m.google_image_requests.push(c)};var sa=function(a,b,c){this.B=a;this.L=b;this.C=c;this.u=null;this.K=this.s;this.G=!1},ta=function(a,b,c){this.message=a;this.fileName=b||"";this.lineNumber=c||-1},A=function(a,b,c,d){var e;try{e=c()}catch(h){var k=a.C;try{var f=ua(h),k=(d||a.K).call(a,b,f,void 0,void 0)}catch(g){a.s("pAR",g)}if(!k)throw h;}finally{}return e},va=function(a){var b=C;return function(){for(var c=[],d=0;d<arguments.length;++d)c[d]=arguments[d];return A(b,"zrt_lookup::stc",function(){return a.apply(void 0,c)})}};
+sa.prototype.s=function(a,b,c,d,e){try{var k=e||this.L,f=new w;f.v=!0;x(f,1,"context",a);b instanceof ta||(b=ua(b));x(f,2,"msg",b.message.substring(0,512));b.fileName&&x(f,3,"file",b.fileName);0<b.lineNumber&&x(f,4,"line",b.lineNumber.toString());b={};if(this.u)try{this.u(b)}catch(B){}if(d)try{d(b)}catch(B){}d=[b];f.j.push(5);f.l[5]=d;var h;e=m;d=[];var g,l=null;do{b=e;u(b)?(g=b.location.href,l=b.document&&b.document.referrer||null):(g=l,l=null);d.push(new ka(g||""));try{e=b.parent}catch(B){e=null}}while(e&&
+b!=e);g=0;for(var q=d.length-1;g<=q;++g)d[g].depth=q-g;b=m;if(b.location&&b.location.ancestorOrigins&&b.location.ancestorOrigins.length==d.length-1)for(g=1;g<d.length;++g){var z=d[g];z.url||(z.url=b.location.ancestorOrigins[g-1]||"",z.w=!0)}for(var L=new ka(m.location.href,!1),N=d.length-1,q=N;0<=q;--q){var v=d[q];if(v.url&&!v.w){L=v;break}}var v=null,Pa=d.length&&d[N].url;0!=L.depth&&Pa&&(v=d[N]);h=new ja(L,v);h.F&&x(f,6,"top",h.F.url||"");x(f,7,"url",h.D.url||"");y(this.B,k,f,this.G,c)}catch(B){try{y(this.B,
+k,{context:"ecmserr",rctx:a,msg:wa(B),url:h.D.url},this.G,c)}catch(kb){}}return this.C};var ua=function(a){return new ta(wa(a),a.fileName,a.lineNumber)},wa=function(a){var b=a.toString();a.name&&-1==b.indexOf(a.name)&&(b+=": "+a.name);a.message&&-1==b.indexOf(a.message)&&(b+=": "+a.message);if(a.stack){a=a.stack;var c=b;try{-1==a.indexOf(c)&&(a=c+"\n"+a);for(var d;a!=d;)d=a,a=a.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,"$1");b=a.replace(/\n */g,"\n")}catch(e){b=c}}return b};var D=window;var xa=-1!=r.indexOf("Opera"),E=-1!=r.indexOf("Trident")||-1!=r.indexOf("MSIE"),ya=-1!=r.indexOf("Edge"),F=-1!=r.indexOf("Gecko")&&!(-1!=r.toLowerCase().indexOf("webkit")&&-1==r.indexOf("Edge"))&&!(-1!=r.indexOf("Trident")||-1!=r.indexOf("MSIE"))&&-1==r.indexOf("Edge"),G=-1!=r.toLowerCase().indexOf("webkit")&&-1==r.indexOf("Edge"),za=function(){var a=m.document;return a?a.documentMode:void 0},H;
+a:{var I="",J=function(){var a=r;if(F)return/rv\:([^\);]+)(\)|;)/.exec(a);if(ya)return/Edge\/([\d\.]+)/.exec(a);if(E)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(G)return/WebKit\/(\S+)/.exec(a);if(xa)return/(?:Version)[ \/]?(\S+)/.exec(a)}();J&&(I=J?J[1]:"");if(E){var K=za();if(null!=K&&K>parseFloat(I)){H=String(K);break a}}H=I}
+var Aa=H,fa={},M=function(a){return ga(a,function(){for(var b=0,c=ca(String(Aa)).split("."),d=ca(String(a)).split("."),e=Math.max(c.length,d.length),k=0;0==b&&k<e;k++){var f=c[k]||"",h=d[k]||"";do{f=/(\d*)(\D*)(.*)/.exec(f)||["","","",""];h=/(\d*)(\D*)(.*)/.exec(h)||["","","",""];if(0==f[0].length&&0==h[0].length)break;b=p(0==f[1].length?0:parseInt(f[1],10),0==h[1].length?0:parseInt(h[1],10))||p(0==f[2].length,0==h[2].length)||p(f[2],h[2]);f=f[3];h=h[3]}while(0==b)}return 0<=b})},Ba=m.document,Ca=
+Ba&&E?za()||("CSS1Compat"==Ba.compatMode?parseInt(Aa,10):5):void 0;var O;if(!(O=!F&&!E)){var P;if(P=E)P=9<=Number(Ca);O=P}O||F&&M("1.9.1");E&&M("9");var Da=Object.prototype.hasOwnProperty,Ea=function(a,b){for(var c in a)Da.call(a,c)&&b.call(void 0,a[c],c,a)},Fa=function(a,b){for(var c=1,d=arguments.length;c<d;++c)a.push(arguments[c])},Ga=function(a,b){var c=b.slice(-1),d="?"===c||"#"===c?"":"&",e=[b];Ea(a,function(a,b){if(a||0===a||!1===a)"boolean"===typeof a&&(a=a?1:0),Fa(e,d,b,"=",encodeURIComponent(String(a))),d="&"});return e.join("")},Ha=function(a){1985<a.length&&(a=a.substring(0,1977),a=a.replace(/%\w?$/,""),a=a.replace(/&[^=]*=?$/,""),
+a+="&trunc=1");return a};var Q,C,R,S=[],Ia=1E-6>Math.random(),T=!(!D.performance||!D.performance.now);Q=new function(){this.O="http:"===D.location.protocol?"http:":"https:";this.J="pagead2.googlesyndication.com";this.N="/pagead/gen_204?id=";this.I=.01;this.P=Math.random()};C=new sa(Q,"jserror",!0);var Ja=C.s,Ka=function(){S.length&&(y(Q,"execution_time",{data:S.join(","),nav_api:T?1:0},!0,Ia?1:0),S=[],D.clearTimeout(R),R=void 0)},U=function(a,b,c){y(Q,a,b,"jserror"!=a,c,void 0)};var V=null,La=function(a){for(var b=ha(),c=0;c<b.length;c++)try{var d=b[c].frames.google_esf;if(d&&(!a||u(d)))return d}catch(e){}return null},W=function(){V||(V=La(!0));return V},X=function(a){var b;if(b=W()){var c=b.esf_propArray;c||(c=b.esf_propArray={});b=c}else b=null;a=b?b[a]:void 0;return a};var Ma=(new Date).getTime();var Y=function(a,b){var c={},d=(new Date).getTime()-Ma;c[b||"dtd"]=1E5<=d?"M":0<=d?d:"-M";return Ga(c,a)};var Wa=function(a,b){var c=null;try{c=a.frameElement}catch(d){}c&&Na(c)?Oa?c.srcdoc=b:Qa?Ra(c.contentWindow.document,b):Sa(c,b):Qa?Ra(a.document,b):(c=b,E&&M(7)&&!M(10)&&6>Ta()&&Ua(c)&&(c=Va(c)),a.goog_content=c,a.location.replace("javascript:window.goog_content"))},Oa=G&&"srcdoc"in document.createElement("iframe"),Qa=F||G||E&&M(11),Ra=function(a,b){a.open("text/html","replace");a.write(b);a.close()},Sa=function(a,b){E&&M(7)&&!M(10)&&6>Ta()&&Ua(b)&&(b=Va(b));var c=function(){a.contentWindow.goog_content=
+b;a.contentWindow.location.replace("javascript:window.goog_content")};E&&!Na(a)?Xa(a,c):c()},Ta=function(){var a=navigator.userAgent.match(/Trident\/([0-9]+.[0-9]+)/);return a?parseFloat(a[1]):0},Na=function(a){try{return u(a.contentWindow)}catch(b){return!1}},Ya=0,Xa=function(a,b){var c="goog_rendering_callback"+Ya++;window[c]=b;a.src="javascript:'<script>(function() {document.domain = \""+document.domain+'";var continuation = window.parent.'+c+";window.parent."+c+" = null;continuation();})()\x3c/script>'"},
+Ua=function(a){for(var b=0;b<a.length;++b)if(127<a.charCodeAt(b))return!0;return!1},Va=function(a){a=unescape(encodeURIComponent(a));for(var b=Math.floor(a.length/2),c=[],d=0;d<b;++d)c[d]=String.fromCharCode(256*a.charCodeAt(2*d+1)+a.charCodeAt(2*d));1==a.length%2&&(c[b]=a.charAt(a.length-1));return c.join("")};var Za=function(a){a=/^https?:\/\/([a-z0-9.-]*)\//.exec(a);return!!a&&("googleads.g.doubleclick.net"==a[1]||"pagead2.googlesyndication.com"==a[1])},$a=function(a,b){var c;a:{var d=W();if(d){(c=d.esf_winPropArray)||(c=d.esf_winPropArray=[]);for(d=0;d<c.length;d++)if(c[d].window==a){c=c[d].store;break a}d={};d.window=a;d.store={};Array.prototype.push.call(c,d);c=d.store}else c=null}c?(c.adUrl=b,c=!0):c=!1;if(c){if(c=X("sraResponses")){for(var d={},e=b.split("?"),e=e[e.length-1].split("&"),k=0;k<e.length;k++){var f=
+e[k].split("=");if(f[0])try{var h=f[0].toLowerCase(),g;if(1<f.length){var l=f[1];g=D.decodeURIComponent?decodeURIComponent(l.replace(/\+/g," ")):unescape(l)}else g="";d[h]=g}catch(z){}}for(h=0;h<c.length;h++)if(g=c[h].metadata,g.ifi==d.ifi&&g.adk==d.adk){for(var q in g)if(Object.prototype.hasOwnProperty.call(g,q)&&(l=g[q],e=d[q],""===l&&e||""!==l&&l!=e))return 3;Wa(a,Array.prototype.splice.call(c,h,1)[0].creative);return 0}return 4}return 2}if(W())return 1;V||(V=La(!1));U("sra::esff",{esfFound:!!V,
+eid:b.substr(b.indexOf("45384828"),9),retryUrl:b.substr(0,250)});return 5},bb=function(a,b){if(Za(b)){b=Y(b,"zet");var c=$a(a,b);0!=c&&a.location.replace(Y(ab(Ha(b),c)))}},ab=function(a,b){return Ga({sfr:b},a)};var cb=/#(R?S)-(.*)/,db=/^(\d+)-(.*)/,eb=/^(\d+)-(.*)/,fb=/\.((google(|groups|mail|images|print))|gmail)\./;var Z=null,gb=function(a,b){a.google_sra_callback=null;null!=Z&&(a.clearTimeout(Z),Z=null);bb(a,b)};var hb=function(){var a;try{var b=fb.test(D.location.host);a=!(!D.postMessage||!D.JSON||b)}catch(h){a=!1}if(a&&(b=(a=(b=cb.exec(D.location.href))&&b[2])&&b[1],a))switch(a=decodeURIComponent(a),b){case "S":if(b=db.exec(a)){if(a=1E3*+b[1],b=b[2],Za(b)){var c;a:{if(b&&(c=b.match("dt=([^&]+)"))&&2==c.length){c=c[1];break a}c=""}Ma=+c||0;b=Y(b,"zst");c=X("sraResponses");"array"==aa(c)?bb(D,b):(b=ba(gb,D,b),Z=D.setTimeout(va(b),a),D.google_sra_callback=b)}}else U("jserror",{context:"zrt_lookup::spp",params:a});
+break;case "RS":var d=eb.exec(a),b="zrt_lookup::rsra";c=1;if(d){var d=parseInt(d[1],10),e;if(e=!isNaN(d)){a:if(e=X("reactiveSraResponses"))d=e[d];else{for(var k=ha(!0,void 0),f=0;f<k.length;f++)if(e=k[f].google_reactive_sra_lookup){U("rsra",{context:"grsl",params:a},1);d=e[d];break a}d=null}d&&Wa(D,d.creative);e=!!d}e&&(b="zrt_lookup::suc",c=.1)}U("rsra",{context:b,params:a},c)}};
+if(Ia){var ib=T?D.performance.now():n();A(C,"zrt_lookup::main",hb,Ja);var jb=Math.round((T?D.performance.now():n())-ib);S.push("zrt_lookup::main."+jb);R||(R=D.setTimeout(Ka,500))}else A(C,"zrt_lookup::main",hb,Ja);}).call(this);
+document.getElementById('gros_titre').styleSize = '40px'
+
+		const titre = document.querySelector("h1");
+		titre;style;position = "absolue";
+		let topPos = 0;
+		let dir =-1;
+		
+		function hautbas() {
+		if ( topPos == 300) { dir =1}
+		else if (topPos == -50) { dir = -2}
+			topPos += 2;
+			titre.style.top = '${topPos}px';
+		}
+		
+			requestAnimationFrame(hautbas);
+		function video 
+		{ 
+		var video : VideoPlaybackQuality
+		VideoTrackList 1,2
+		}
+
+
+
+		function play(idPlayer, control) {
+    var player = document.querySelector('#' + idPlayer);
+    if (player.paused) {
+    player.play();
+    control.textContent = 'Pause';
+    } else {
+    player.pause();
+    control.textContent = 'Play';
+    }
+    } function resume(idPlayer) {
+    var player = document.querySelector('#' + idPlayer);
+    player.currentTime = 0;
+    player.pause();
+    }
+	//jtyf
+    
+
+    function volume(idPlayer, vol) {
+var player = document.querySelector('#' + idPlayer);
+player.volume = vol;
+}
+function update(player) {
+                    var duration = player.duration; // Durée totale
+                    var time = player.currentTime; // Temps écoulé
+                    var fraction = time / duration;
+                    var percent = Math.ceil(fraction * 100);
+                    var progress = document.querySelector('#progressBar');
+                    progress.style.width = percent + '%';
+                    progress.textContent = percent + '%';
+                    }
+
+
+
+
+                    function formatTime(time) {
+var hours = Math.floor(time / 3600);
+var mins = Math.floor((time % 3600) / 60);
+var secs = Math.floor(time % 60);
+if (secs < 10) {
+secs = "0" + secs;
+} i
+f (hours) {
+if (mins < 10) {
+mins = "0" + mins;
+} r
+eturn hours + ":" + mins + ":" + secs; // hh:mm:ss
+} else {
+return mins + ":" + secs; // mm:ss
+}
+}
+
+
+function getMousePosition(event) {
+if (event.pageX) {
+return {
+x: event.pageX,
+y: event.pageY
+};
+} else {
+return {
+x: event.clientX + document.body.scrollLeft +
+document.documentElement.scrollLeft,
+y: event.clientY + document.body.scrollTop +
+document.documentElement.scrollTop
+};
+}
+}
+
+
+
+function getPosition(element){
+var top = 0, left = 0;
+while (element) {
+left += element.offsetLeft;
+top += element.offsetTop;
+element = element.offsetParent;
+} return { x: left, y: top };
+}
+
+function clickProgress(idPlayer, control, event) {
+var parent = getPosition(control); // La position absolue de la progressBar
+var target = getMousePosition(event); // L'endroit de la progressBar où on a cliqué
+var player = document.querySelector('#' + idPlayer);
+var x = target.x - parent.x;
+var wrapperWidth =
+document.querySelector('#progressBarControl').offsetWidth;
+var percent = Math.ceil((x / wrapperWidth) * 100);
+var duration = player.duration;
+player.currentTime = (duration * percent) / 100;
+}
+</script>
+<body>
+<div id="bloc_page"></div>
+	
+		<section class ="slideshow">
+        <div class ="content">
+            <div loop poster class ="content-carrousel">
+                <figure class ="shadow"><img src ="juliot1 (14).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (13).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (12).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (11).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (1).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (2).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (4).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (7).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (6).jpg"></figure>
+                <figure class ="shadow"><img src ="juliot1 (12).jpg"></figure>
+                <figure class ="shadow"><img src ="gasy.jpg"></figure>
+            </div>
+        </div>
+    	</section>
+		<div class ="carousel-item">
+		<p justify-content : center></p><img src="gasy.jpg"></p>
+		</div>
+		<p>*************</p>
+		<p>*************</p>
+			<jul>
+				<ul>
+					<p><li><a href="#Poèmes">Poèmes</a></li><p/>
+					<p><li><a href="#chansons">Chansons</a></li><p/>
+					
+
+				</ul>
+			</jul>
+	
+	<p><h1 id="gros_titre"></h1></p>
+		<!-- ce ci est un page d'acceuil -->
+		<p><h1> <p style="color: blue;">Bonjour et bienvenue sur le site Gasy manan-talenta sy mpandraraha!</h1></p>
+
+<p><strong>Ce site est ouvert pour tous.</strong><br />
+
+		Si vous avez du talent alors vous pouvez le publier ici comme:</p>
+	
+			<h2 id="Poèmes">Les Poèmes</h2>
+		<p style="color: maroon;">******Poèmes d'Irinah Soavazafy ******</p>
+		<div class ="carousel-item">
+			<img loop poster src="irinah.jpg" width="100" />
+		<div/>
+		<p><h3><p style="color: rgb(0, 55, 128);">Ai-je fais une erreur?<p><h3></h3>
+			<div class ="carousel-item">
+			<img loop poster src="irinah2.jpg" width="100" class="flottant"/>
+		<div/>
+		<p>De penser à toi toute heure<br />
+		Je ne sais pas aussi si c'est mal <br />
+		D'être attaché à une personne que tu crois soit disant spécial<br />
+		Tu me manque et j'ai pas besoin que tu ressent la même chose<br />
+		Car je sais pour toi certaines choses ont besoins d'une pause<br />
+		T'inquiète je vais bien malgré le vide qui nous sépare<br />
+		J'espère juste que tu prouve toujours le même sentiment à mon égard<br />
+		Je ne vais pas te mentir<br />
+		Mais ton silence et ton absence m'as fait souffrir<br />
+		Mais faut que je m'habitue avec<br />
+		Car je veux pas que tu crois que c'étais à cause de toi mon échec <br />
+		Souvent je me disais que suis chanceuse de t'avoir <br />
+		C'est la vérité tu peux le croire<br />
+		Même si c'est dur pour toi, tu m'as laissé tranquille pour que je me concentre sur mon objectif<br />
+		Y'a pas deux comme toi "bb " je te kiffe<br />
+		Mais je veux essayer d'être toujours là pour toi<br />
+		Quand tu aura besoin de moi. Je serais là<br />
+		Je te prendrais la main<br />
+		Et on va se batrre pour nous jusqu'à la fin <br />
+		Parfois je me dis "il ne t'aime pas"<br />
+		"Arrête d'insister Irinah"<br />
+		Mais tes actes m'ont fait prouvé<br />
+		Que tu ne m'as jamais cesser de m'aimer<br />
+			*****Irinah Soavazafy******</p>
+
+			
+			<p><h3><p style="color: rgb(0, 55, 128);">Ne me sous estimez pas😌<h3></h3></p>
+			<div class ="carousel-item">
+			<img loop poster src="irinah1.jpg"  class="flottant"/>
+		<div/>
+	
+	 <p><p style="color:yellow;">Aujourd'hui j'ai échouée mais t'as pas le droit de me juger😉<br />
+		Ts magninou ab na lavo zh nomaly<br />
+		Alaho agnaty saignanw we zah ijanona ambany😊<br />
+		Non je vais pas rester là où j'étais<br />
+		Car j'en ai encore de l'espoir que demain je réussirai😁<br />
+		Les gens n'arretais pas de me reprochée<br />
+		PK t'as échouée alors que nous nous avons gagner😌<br />
+		Mais faut que tu sois au courant d'une chose ouais.....<br />
+		Niezak zh fa mbl ts tafakatra😔<br />
+		Misy rh ts ampi tao matoa zh latsaka<br />
+		Mbl managna espoir ar mbl ts kivy<br />
+		Mbl hiposaka lay anjara masoandrok ar mety mbl ho mamy ny angivy😍<br />
+		Je sais PK t'arretais pas de dire au gens que t'es fière parce qu tu as réussi🙊<br />
+		ta fierté c'est d'avoir été en compétition avec tout le monde chérie.....😗<br />
+		#by me❤<br />
+					*****Irinah Soavazafy******</p>
+
+
+		<p><h3><p style="color: rgb(0, 55, 128);">Amitié❤<p><h3></h3>
+		<p>On ne peut pas vivre sans amis<br />
+		Car il est nécessaire dans nos vie<br />
+		C'est très rare de trouver de l'amitié<br />
+		Alors dit pas que tu vas échouer avant d'avoir essayer<br />
+		Ils nous aident à résoudre des problèmes<br />
+		Ils s'inquiètent pour toi parce qu'il t'aime<br />
+		C'est vrai que t'es certains amis n'ont pas de coeur<br /> 
+		Quand on aura des problèmes et quand on pleure <br />
+		Mais y a aussi des amis qui nous soutiens jusqu'au bout <br />
+		Et c'est ce qu'on appelle de l'amour<br />
+		Des amies se mettent à rire quand on est malheureux et ils seront heureux<br />
+		Mais on a besoin de quelqu'un pour nous consoler<br />
+		Pour nous aides à revenir à la réalité<br />
+		C'est vrai que moi et mes amies se disputent<br />
+		Mais ça ne change pas nos solidarité<br />
+		Car l'amour que nous ressent s'augmenter<br />
+		Oh! Comme j'ai de la chance d'avoir des amis qui m'aime et qui m'écoute et m'aide à travers la bonne route<br />
+		L'amitié est basé sur la confiance et l'amour <br />
+		Car si l'un fait une erreur alors faut qu'il s'excuse toujours😔<br />
+		Car je crois pas qu'il puisse y avoir de l'amitié s'il n'y pas de pardon<br />
+		C'est pour ça qu'on excuse si nous voulons <br />
+		Que notre amitié dure longtemps<br />
+		Et que nous ailerons pendant le temps que nous avons<br />
+		Pour moi,mon ami je l'aime bien<br />
+		Je l'aime depuis que je le sais<br />
+		Et aussi l'amour qu'elle m'as donné est parfait<br />
+		À mon avis l'amitié est une chose vrai❤<br />
+		#by Irinah❤<br />
+		*****Irinah Soavazafy******</p>
+
+
+		
+			<p><h3><p style="color: rgb(0, 55, 128);">Nouvel an ou nouvelle vie<p><h3></h3> 
+		<p>Si ces deux choses sont le même alors je vais écrire ceci<br />   
+		Mon nouvel an   <br />
+		C'etais un peu amusant<br />   
+		Ma nouvelle vie   <br />
+		Ça a commencé avec lui  <br />
+		Moi et lui  <br />
+		Au beau milieu de la nuit<br /> 
+		La nuit de la reveillon  <br />
+		J'étais là à côté de lui au nouvel an <br /> 
+		Je ne faisait qu'écouter le battement de son coeur<br />  
+		Et on se parlaient en douceur  <br />
+		Pendant ces moment court  <br />
+		On aurait pu avouer notre amour <br /> 
+		On ne faisaient que se regarder dans les  yeux <br />
+		Crois-moi ces moments qu'on a passé ensemble me sont précieux<br /> 
+		Comme si le temps va s'arrêter <br />
+		Mon cœur n'arrêtais de prononcer ton prénom<br /> 
+		À chaque fois qu'il m'as pris dans ses bras <br />
+		Je me sentais que rien de mal ne m'atteindra <br />
+		À chaque fois que tes lèvres posaient sur les miens<br /> 
+		C'est comme ci le monde n'y aura pas de fin   <br />
+		Mon coeur se mis à battre à chaque fois que tu m'attire vers toi<br />  
+		T'es le seul qui peut lui faire ça  <br />
+		Je na sais pas pourquoi  <br />
+		Je déteste de t'aimer car cela me donne une espèce de peur<br />  
+		Depuis que je t'ai aimé je vis avec la peur de te perdre  <br />
+		J'ai pas besoin des promesses  <br />
+		Mais seulement en me prouvant que tu m'aime<br />   
+		Et que tout resteraient comme hier   <br />
+		Que notre amour sera toujours sucré comme des miels<br />  
+		Inah❤
+		*****Irinah Soavazafy******</p>
+
+		<h2 id="chansons">Chansons</h2>
+		<p>Bonjour. Si vous souhaitez d'entrer dans la page des dessins veillez cliquer ceci: <a href="gasy manan talenta chansons.html">gasy manan talenta Chansons</a> </p>
+		<p>Bonjour. Souhaitez-vous visiter notre page facebook<a href="https://mobile.facebook.com/pg/Gasy-manan-talenta-sy-mpandraraha-106780901834431/posts/?ref=page_internal&mt_nav=0">Gasy manan-talenta sy mpandraraha</a> <br />
+		C'est un bon site ! ;-)</p>
+
+
+
+		
+
+                
+            <video id="videoPlayer" ontimeupdate="update(this)"></video>
+
+                
+				
+			</span>
+        <span class="volume">
+                <a class="stick1" onclick="volume('videoPlayer', 0)"></a>
+                <a class="stick2" onclick="volume('videoPlayer', 0.3)"></a>
+                <a class="stick3" onclick="volume('videoPlayer', 0.5)"></a>
+                <a class="stick4" onclick="volume('videoPlayer', 0.7)"></a>
+                <a class="stick5" onclick="volume('videoPlayer', 1)"></a>
+                </span>
+   	 	<video  controls preload="metadata" loop poster id="videoPlayer">
+            <source src="Welvi.MP4"></source>
+		</video> 
+		<video  controls preload="metadata" loop poster id="videoPlayer">
+            <source src="lever.mp4"></source>
+			
+		</video>  
+    
+	</section>
+
+        
+</div>
+		
+</body>
+</html>

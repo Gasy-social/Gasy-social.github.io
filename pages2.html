@@ -1,0 +1,27 @@
+<html>
+<DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Gasy manan-talenta sy mpandraraha/chanson</title>
+		<meta name -"keywords" content -"HTML,CSS,XML,JavaScript">
+		<meta http-equiv -"refresh" content -"30">
+		<link rel="stylesheet" href="test.css" />
+	</head>
+	<body>
+	<?php
+$image = imagecreate(LARGEUR, HAUTEUR);
+$fond = imagecolorallocate($image, 255, 0, 0);
+$blanc = imagecolorallocate($image, 255, 255, 255);
+imagestring($image, 5, 5, 5, $message, $blanc);
+ob_start();
+imagegif($image);
+$animation[] = ob_get_clean();
+$duree[] = 100; //Attention, le temps d'affichage des images s'écrit
+en centième de seconde, 1s = 100cs
+imagedestroy($image);
+?>
+	
+		<h1>Bienvenue sur gasy manan talenta chansons !</h1>
+		<!-- ce ci est un page de chansons -->
+	</body>
+<html>
