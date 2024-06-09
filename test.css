@@ -55,19 +55,14 @@ body{
 souligne
 {
 text-decoration: underline;
-}.
-barre
-{VGHJN
+
 text-decoration: line-through;
-}. 
-ligne_dessus
+}
 .carousel-item img
 	{
 		width: 100%;
-	}
-{
-text-decoration: overline;
-}
+		text-decoration: overline;}
+
 h1 {font-family: arial, verdana, sans-serif;}
 h2 {font-family: "Times New Roman", serif;}
 th {
@@ -90,11 +85,6 @@ letter-spacing: 10px;
 font-weight:bold;
 color:red;
 }
-#videoPlayer
-	{
-		width:50%;
-	}
-
 #bloc_page
 	{
 		width:900px;
